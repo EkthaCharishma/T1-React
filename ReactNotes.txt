@@ -1,0 +1,208 @@
+*React*
+JavaScript is having libraries and frameworks.
+
+libraries - is a collection of codes
+		less set of rules
+		-reactjs, jquery, ember etc...
+		- are used to develop small or moderate amount of application
+frameworks - is a collection of libraries
+		- having more set of rules
+		-angular, vuejs, pebble etc...
+		- ekart applications, banking,etc..
+
+- React is a javascript library to build rich user interface.
+- is faster because of "Virtual DOM" (virtual dom makes the application more faster).
+- follows component based approach.
+- follows unidirectional data flow.
+- follows both client-side rendering and server-side rendering.
+- was introduced in 2011 by facebook.
+- later was made open-source in 2013.
+- Jordan walke
+- is a free and platform independent.
+
+Virtual DOM:-
+- is a virtual representation of ui which is kept in a memory and later synced with real DOM by using a library called "ReactDOM".
+
+
+React file		ReactDOM		RealDOM
+<p></P>			contains		(DOM tree structure)
+<span></span>		replica of RealDOM
+updated
+<form></form>		updated VirtualDOM	patch that updated
+			
+			this is working of virtualDOM
+			
+			Defing Algorithm
+
+Reconciliation:- 
+processof updating the RealDOM with the virtual dom 
+
+
+*Installation*
+install node js
+install react application CLI
+- npm install create-react-app --globally
+insall react app with foldername
+- npm init react-app myapp
+
+
+*folder structure*
+node modules - stores all the third party libraries.
+public - stores all the static files such as images, videos, html files.
+src - is the actual react folder where developer 
+package.json - 
+package-lock.json - 
+
+
+- inside src folder index.js file is a mandatory file.
+- the name of this file must be index.js only.
+- index.js act as a bridge between index.html and react component.
+
+
+React library - is the main library which contains all the predefined methods
+ReactDOM library - is responsible for creating virtual dom and updating
+React scripts - 
+
+
+*JSX*
+is a JavaScript and xml
+is a JavaScript syntax which is used to write html-like markup in the react.js
+
+JSX is a case sensitive.
+
+Rules for JSX:-
+	all the tags irrespective of paired or unpaired tag every tag must be closed.
+	when more than one jsx element is using they must wraped with one parent element.
+
+JSX expressions:-
+is used to call variables, expression.
+
+
+*Components*
+1. Class - called as satefull component
+2. Functional component:-
+	by default is a stateless until React v16.8, later they introduce "hooks" concept which makes react functional component as statefull component.
+
+Component Composition:-
+multiple components are combined together to make one single application.
+- every component must be created with capital letters.
+	ex- App.jsx/App.js
+- two components should not have a same name in the same directory.
+- how to call component inside another component.
+
+
+myapp -> src -> components -> App.jsx, Navbar.jsx, Main.jsx, Sidebar1.jsx, Sidebar2.jsx, Footer.jsx, global.css
+
+App.jsx
+********
+import Navbar from "./components/Navbar";
+const App=()=>{
+	return(
+		<div className="app">
+		<Navbar/>
+		<Main/>
+		<div className="sidebar">
+			<Sidebar1/>
+			<Sidebar2/>
+		</div>
+		<Footer/>
+		</div>
+	)
+}
+export default App;
+
+Navbar.jsx
+************
+import react form React.components;
+class Navbar extends App{
+	<div className="Navbar">
+		<h1>Navbar</h1>
+	</div>
+}
+export default Navbar;
+
+
+*props*
+is an object
+is a immutable object
+is nothing but properties
+is used to share the information/data from one component to another component
+can be passed string, number, Boolean, array, object, function, etc...
+can be passed from parent component to child component
+
+import React, {Component} from 'react'
+class CBCPropsex1 extends Componet{
+render(){
+console.log(this.props.username);
+return(
+<div>CBCPropsex1
+<h1>{this.props.username}</h1>
+</div>
+)
+}
+}
+export default CBCPropsex1;
+
+App.jsx
+*********
+import React, {component} from 'react'
+import CBCPropsex1 from './propsexample/CBCPropex1;
+class App extende component{
+render(){
+return(
+<div>App
+<hr/>
+<CbCPropsex1
+username="Sam"
+age={25}
+desig={["developer", "tester"]}		//representing an array
+userDetails={{city:"Hyd", area:"Maisammaguda"}}		//object
+sendFun={function(){alert("Hi im from parent component")}}	//function
+/>
+</div>
+)
+}
+}
+export default App;
+
+accessing - {this.props.username}
+in functional - {props.username}
+
+CBCPropsex1.jsx
+****************
+import React, {component} from 'react'
+class CBCPropsex1 extends Component{
+render(){
+console.log(this);
+return(
+<div>CBCPropsex1
+<h1>{this.props.username}</h1>
+<h2>{this.props.age}</h2>
+<div>{this.props.desig[0]}</div>
+<h2>{this.props.userDetails.area}</h2>
+<button on Click={this.props.sendFun}>click on button</buttom>
+</div>
+)
+}
+}
+export default CBCPropsex1;
+
+--Data want to transfer from child5 to app --- transferred to c5->c4->c3->c2->c1->app.
+
+*props children*
+A props.children prop is a special type of props used to share the information such as data
+
+
+*state*
+is an object which is used to store/isolated the data inside the component
+is mutable object
+
+
+Functional component:-
+	by default is a stateless until React v16.8, later they introduce "hooks" concept which makes react functional component as statefull component.
+
+Hooks:- are nothing but functions which are used to provide all the features of class 
+Basic Hooks
+1.useState()
+2.useEffect()
+3.useContext()
