@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react'
 
-const FBCPropex1=(props)=>{
+const FBCPropex1 = (props) => {
     console.log(props);
-    if(props.islOggedIn== true){
+    if(props.isLoggedIn == true){
         return(
             <div>
-                <h1>Welcome {props.username}</h1>
-                {
-                    props.hobbies.map((value)=>{
-                        return <li>{value}</li>
-                    })
-                }
+                <h1>welcome {props.username}</h1>
+                    {
+                        props.hobbies.map((value)=>{
+                            return <li>{value}</li>
+                        })
+                    }
             </div>
         )
     }else{
