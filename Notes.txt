@@ -45,6 +45,11 @@ install react application CLI
 insall react app with foldername
 - npm init react-app myapp
 
+if we get any error:-
+	- npm cache clean --force
+	- npm install -g npm@latest
+	- npm init react-app myapp
+
 
 *folder structure*
 node modules - stores all the third party libraries.
@@ -53,11 +58,9 @@ src - is the actual react folder where developer
 package.json - 
 package-lock.json - 
 
-
 - inside src folder index.js file is a mandatory file.
 - the name of this file must be index.js only.
 - index.js act as a bridge between index.html and react component.
-
 
 React library - is the main library which contains all the predefined methods
 ReactDOM library - is responsible for creating virtual dom and updating
@@ -67,7 +70,6 @@ React scripts -
 *JSX*
 is a JavaScript and xml
 is a JavaScript syntax which is used to write html-like markup in the react.js
-
 JSX is a case sensitive.
 
 Rules for JSX:-
@@ -79,7 +81,8 @@ is used to call variables, expression.
 
 
 *Components*
-1. Class - called as satefull component
+are loosely coupled(one component is independent on another).
+1. Class component - called as satefull component
 2. Functional component:-
 	by default is a stateless until React v16.8, later they introduce "hooks" concept which makes react functional component as statefull component.
 
@@ -198,11 +201,56 @@ is an object which is used to store/isolated the data inside the component
 is mutable object
 
 
-Functional component:-
-	by default is a stateless until React v16.8, later they introduce "hooks" concept which makes react functional component as statefull component.
+*Styles*
+1.seperate stylesheet
+2.inline
+3.modules
 
-Hooks:- are nothing but functions which are used to provide all the features of class 
-Basic Hooks
+
+*Controlled Elements/components*
+
+
+*Form-Handling*
+<form method=""onSubmit>
+  <input type=text>
+  <button>
+</form>
+
+
+**project on
+React Virtual vs Real DOM
+DOM Manipulation
+React vs JS
+Library vs Framework
+Use of Components
+Functional vs Class
+State
+Props
+UseState
+Applying styles to components
+Controlled From elements
+
+
+this keyword - target current object.
+
+
+*Hooks*
+are nothing but functions which are used to provide all the features of class 
+
+Basic Hooks:-
 1.useState()
-2.useEffect()
-3.useContext()
+2.useEffect() - is a function that allows developers to do some necessary side effects such as setTimeout, api fetching, updating the state
+	syntax - 
+3.useRef() - is used to target the real dom elements
+	- we should avoid using of ref more except some situations like media contollings, animations etc...
+	- should not be used more
+4.useContext() - to avoid props drilling we use this hook.
+	- create a global data
+
+<React.Fragment></React.Fragment>:-
+-it is act as a parent element for the jsx element, but it wont 
+List & Keys:- in react, the listed items from map method should have a unique key prop,
+
+
+**Audio and Video are empty tags they wont print any content which is written between that.
+

@@ -83,17 +83,43 @@
 // export default App
 
 
-//! state
-import React from 'react';
-// import FBCStateEx from './stateexamples/FBCStateEx';
-import CBCStateEx from './stateexamples/CBCStateEx';
+// //! state
+// import React from 'react';
+// // import FBCStateEx from './stateexamples/FBCStateEx';
+// import CBCStateEx from './stateexamples/CBCStateEx';
+
+// const App = () => {
+//   return (
+//     <div>
+//       {/* <FBCStateEx></FBCStateEx> */}
+//       <CBCStateEx></CBCStateEx>
+//     </div>
+//   );
+// }
+// export default App;
+
+
+// import React from "react";
+// import MyForm from "./Component/MyForm";
+
+// const App = () => {
+//   return (
+//     <div>
+//       <MyForm />
+//     </div>
+//   );
+// }
+// export default App
+
+import React from "react";
+import refExample from './hooks/UseEffectEx';
+import RefExample from "./hooks/RefExample";
 
 const App = () => {
   return (
     <div>
-      {/* <FBCStateEx></FBCStateEx> */}
-      <CBCStateEx></CBCStateEx>
+      <RefExample />
     </div>
   );
 }
-export default App;
+export default App
